@@ -6,10 +6,7 @@ for(var i = 0; i<minus.length; i++){
 	e.innerHTML = '-';
 	minus[i].appendChild(e);
 	}
+
 };
 
 document.addEventListener('DOMContentLoaded', fn, false);
-
-
-
-
