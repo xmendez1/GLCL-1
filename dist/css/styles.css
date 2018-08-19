@@ -1,7 +1,7 @@
-body {
-  background-color: #4B4F53;
+@import url("https://fonts.googleapis.com/css?family=Nunito");
+* {
+  font-family: 'Nunito', sans-serif;
 }
-
 .button {
   background-color: unset;
   height: 40px;
@@ -41,12 +41,12 @@ body {
   vertical-align: middle;
   margin: auto;
   text-align: center;
-  line-height: 37.5px;
+  line-height: 32px;
   color: #F4CC61;
   font-size: 40px;
 }
 
-.button.long {
+.button.square {
   height: 45px;
   width: 300px;
   border-radius: 50px;
@@ -54,53 +54,67 @@ body {
   margin-bottom: 20px;
 }
 
-.button.long p {
+.button.square p {
   vertical-align: middle;
   margin: auto;
   text-align: center;
   line-height: 45px;
   color: #4B4F53;
   font-size: 14px;
-  font-family: monospace;
 }
 
-.button.long.inactive {
+.button.square i {
+  color: #4B4F53;
+  font-weight: 900;
+  margin: auto 125px;
+  vertical-align: middle;
+  font-size: 25px;
+  line-height: 15px;
+  border-radius: 20px;
+  padding: 15px;
+}
+
+.button.square i.gold-check {
+  color: #F4CC61;
+}
+
+.button.square.inactive {
   background-color: white;
   border: 3px solid white;
   margin-top: 20px;
 }
 
-.button.long.inactive p {
+.button.square.inactive p {
   color: lightgrey;
 }
 
-.button.long.normal {
+.button.square.normal {
   background-color: #F4CC61;
 }
 
-.button.long.hover {
+.button.square.hover {
   background-color: #F5D67C;
   border: 3px solid #F5D67C;
 }
 
-.button.long.hover p {
+.button.square.hover p {
   color: #717271;
 }
 
-.button.long.hoverLight {
+.button.square.hoverLight {
   background-color: #8D7E53;
 }
 
-.button.long.hoverLight p {
+.button.square.hoverLight p {
   color: #F4CC61;
 }
 
-.button.long.click {
+.button.square.click {
   background-color: #BEA04B;
   border: 3px solid #BEA04B;
 }
 
-.button.long.dark p {
+.button.square.dark p {
   color: #F4CC61;
 }
 li {

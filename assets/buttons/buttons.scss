@@ -1,7 +1,3 @@
-body {
-  background-color: #4B4F53;
-}
-
 .button{
   background-color:unset;
   height:40px;
@@ -37,14 +33,14 @@ body {
     	vertical-align: middle;
     	margin: auto;
     	text-align: center;
-      line-height: 37.5px;
+      line-height: 32px;
     	color: #F4CC61;
     	font-size: 40px;
     }
 
   }
 
-  &.long {
+  &.square {
     height: 45px;
     width: 300px;
     border-radius: 50px;
@@ -58,7 +54,21 @@ body {
       line-height: 45px;
       color: #4B4F53;
       font-size: 14px;
-      font-family: monospace;
+    }
+
+    i{
+      color: #4B4F53;
+      font-weight: 900;
+      margin: auto 125px;
+      vertical-align: middle;
+      font-size: 25px;
+      line-height: 15px;
+      border-radius: 20px;
+      padding: 15px;
+
+      &.gold-check {
+        color: #F4CC61;
+      }
     }
 
     &.inactive {
