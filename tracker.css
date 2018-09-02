@@ -1,0 +1,28 @@
+h1{
+	font-size: 50px;
+	text-align: center;
+	vertical-align: middle;
+}
+
+h1, p, .fa-arrow-left, .fa-times {
+	color: #C8CDCD;
+}
+
+.iphone-wrapper {
+	width: 400px;
+	border: 1px solid black;
+	height: 900px;
+}
+.button-row{
+	display: flex;
+	justify-content: center;
+}
+
+.iphone-wrapper {
+	position: relative;
+}
+.fa-times {
+	position: absolute;
+	top: 0px;
+	right:0px;
+}
