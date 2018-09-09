@@ -1,5 +1,5 @@
-let dashboard = () => {
+// let dashboard = () => {
 
-};
+// };
 
-document.addEventListener('DOMContentLoaded', dashboard, false);
+// document.addEventListener('DOMContentLoaded', dashboard, false);
