@@ -7,8 +7,6 @@ var concatCss = require('gulp-concat-css');
 let cleanCSS = require('gulp-clean-css');
 const babel = require('gulp-babel');
 
-gulp.task('default',['scripts','sass']);
-
 //script paths
 var jsFiles = 'assets/**/*.js',
     jsDest = 'dist/scripts';
@@ -23,6 +21,12 @@ gulp.task('scripts', function() {
       .pipe(gulp.dest(jsDest));
 });
 
+gulp.task('stream', function () {
+    // Endless stream mode
+    return watch(jsFiles, { ignoreInitial: false })
+        .pipe(gulp.dest('build'));
+});
+
 //scss paths
 var scssFiles = 'assets/**/*.scss',
     cssDest = 'dist/css';
@@ -35,6 +39,19 @@ gulp.task('sass', function(){
     .pipe(rename('styles.min.css'))
     .pipe(cleanCSS({compatibility: 'ie8'}))
     .pipe(gulp.dest(cssDest))
+});
+
+gulp.task('default',['scripts','sass'], function() {
+   // watch for CSS changes
+   gulp.watch(scssFiles, function() {
+      // run styles upon changes
+      gulp.run('sass');
+   });
+   // watch for CSS changes
+   gulp.watch(jsFiles, function() {
+      // run styles upon changes
+      gulp.run('scripts');
+   });
 });
 
 //to understand how this works, watch Class 3 vid 52:00, "to create a single component with some modification"
